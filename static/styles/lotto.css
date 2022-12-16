@@ -1,0 +1,132 @@
+#lotto {
+	width: 100%;
+	max-width: 800px;
+	min-height: 800px;
+	margin: auto;
+}
+
+.banner {
+	display: flex;
+	justify-content: center;
+	margin: 0 20px;
+}
+
+.lotto_icon {
+	text-align: center;	
+}
+
+#lotto_icon {
+	height: 80px;
+}
+
+.title {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+.title-name {
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 5px 0;
+}
+
+.form {
+	height: 40px;
+}
+
+.user-input {
+	margin: 0px;
+	height: 40px;
+}
+
+.form-input {
+	text-align: center;
+	margin: 5px;
+}
+
+#result {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.ball {
+	display: inline-block;
+	text-align: center;
+  vertical-align: middle;
+	width: 60px;
+	height: 60px;
+	line-height: 56px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	border-radius: 100%;
+	font-size: 28px;
+	font-weight: 500;
+	color: rgb(255 255 255);
+	text-shadow: 0px 0px 3px rgb(73 57 0 / 80%);
+}
+
+.hide {
+	display: none;
+}
+
+/* reference: https://velog.io/@henotony/CSS%EB%A7%8C%EC%9C%BC%EB%A1%9C-Tab%EC%A0%84%ED%99%98%EC%8B%9C%ED%82%A4%EB%8A%94-%EB%B0%A9%EB%B2%95 */
+
+/* 탭 전체 스타일 */
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 0 auto;}
+
+/* 탭 스타일 */
+.tab_item {
+  width: calc(100%/3);
+  height: 50px;
+  border-bottom: 3px solid #333333;
+  background-color: #f8f8f8;
+  line-height: 50px;
+  font-size: 16px;
+  text-align: center;
+  color: #333333;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/* 라디오 버튼 UI삭제*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/* 탭 컨텐츠 스타일 */
+.tab_content {
+  display: none;
+	height: 1000px;
+  padding: 10px 10px 0;
+  clear: both;
+  overflow: auto;
+}
+
+/* 선택 된 탭 콘텐츠를 표시 */
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+  display: block;
+}
+
+/* 선택된 탭 스타일 */
+.tabs input:checked + .tab_item {
+  background-color: #333333;
+  color: #fff;
+}

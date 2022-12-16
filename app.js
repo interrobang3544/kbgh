@@ -15,6 +15,14 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
+app.get('/lostark', (req, res) => {
+  res.render('lostark')
+})
+
+app.get('/lotto', (req, res) => {
+  res.render('lotto')
+})
+
 app.listen(port, () => {
   console.log(port, "포트로 서버가 켜졌어요!");
 })
