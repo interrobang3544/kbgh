@@ -16,7 +16,7 @@
 }
 
 #lotto_icon {
-	height: 80px;
+	height: 140px;
 }
 
 .title {
@@ -79,7 +79,7 @@
 .tabs {
   margin-top: 50px;
   padding-bottom: 40px;
-  background-color: #ffffff;
+  background-color: #333333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 700px;
   margin: 0 auto;}
@@ -88,12 +88,12 @@
 .tab_item {
   width: calc(100%/3);
   height: 50px;
-  border-bottom: 3px solid #333333;
-  background-color: #f8f8f8;
+  border-bottom: 3px solid #f8f8f8;
+  background-color: #333333;
   line-height: 50px;
   font-size: 16px;
   text-align: center;
-  color: #333333;
+  color: #f8f8f8;
   display: block;
   float: left;
   text-align: center;
@@ -114,6 +114,7 @@ input[name="tab_item"] {
   display: none;
 	height: 1000px;
   padding: 10px 10px 0;
+	color: #ffffff;
   clear: both;
   overflow: auto;
 }
@@ -127,6 +128,6 @@ input[name="tab_item"] {
 
 /* 선택된 탭 스타일 */
 .tabs input:checked + .tab_item {
-  background-color: #333333;
-  color: #fff;
+  background-color: #ffffff;
+  color: #333333;
 }
