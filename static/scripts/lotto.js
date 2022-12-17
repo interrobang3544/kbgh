@@ -7,16 +7,19 @@ function askForNum() {
 }
 
 function handleSubmit(event) {
-    event.preventDefault();
-    paintInput(input.value);
-    generateBalls(input.value);
+  event.preventDefault();
+  console.log(typeof(input.value))
+  paintInput(input.value);
+  generateBalls(input.value);
 }
   
 function paintInput(text){
   userInput.classList.remove('hide');
   form.classList.add('hide');
-  userInput.innerText = `${text}번 생성합니다.
-  *다시 하시려면 새로고침 해주세요.`
+  userInput.innerHTML = `
+  <div>${text}번 생성합니다</div>
+  <button type="button" class="btn btn-primary retry-btn" onclick="location.href='/lotto'">다시 하기</button>
+  `
 }
 
 askForNum();

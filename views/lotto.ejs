@@ -35,7 +35,7 @@
             <div>
             <div class="title-name">로또 번호 자동 생성기</div>
             <form class="form">
-              <input class="form-input" type="text" placeholder="몇 번 생성하실 건가요?" />
+              <input class="form-input" type="number" min="1" max="500" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="몇 번 생성하실 건가요?" style="width: 200px"/>
             </form>
             <div class="user-input hide"></div>
             </div>

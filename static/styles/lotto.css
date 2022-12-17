@@ -35,17 +35,23 @@
 }
 
 .form {
-	height: 40px;
+	height: 69px;
 }
 
 .user-input {
 	margin: 0px;
-	height: 40px;
 }
 
 .form-input {
 	text-align: center;
 	margin: 5px;
+}
+
+.retry-btn {
+	height: 35px;
+	line-height: 35px;
+	margin: 5px 0;
+	padding: 0 15px;
 }
 
 #result {
@@ -81,7 +87,8 @@
   padding-bottom: 40px;
   background-color: #333333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 700px;
+  width: 100%;
+	max-width: 700px;
   margin: 0 auto;}
 
 /* 탭 스타일 */

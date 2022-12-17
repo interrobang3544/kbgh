@@ -28,7 +28,7 @@ function showArmories(userNickname) {
     } = response.data.data
 
     const temp = document.createElement("div");
-    temp.setAttribute("class", "main-box")
+    temp.setAttribute("class", "col-md main-box")
     temp.innerHTML = `
     <div class="main-box-title">${CharacterName}</div>
       <div class="main-box-content">

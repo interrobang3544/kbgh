@@ -6,7 +6,7 @@
 }
 
 #lostark {
-  display: flex;  
+  justify-content: center;
 }
 
 .main-box-title {
