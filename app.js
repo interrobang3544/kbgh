@@ -12,7 +12,7 @@ app.use(express.json());
 app.use("/api", [lostarkRouter]);
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', { components: 'index' })
 })
 
 app.get('/lostark', (req, res) => {
@@ -21,6 +21,10 @@ app.get('/lostark', (req, res) => {
 
 app.get('/lotto', (req, res) => {
   res.render('lotto')
+})
+
+app.get('/zep', (req, res) => {
+  res.render('index', { components: 'zep' })
 })
 
 app.listen(port, () => {

@@ -18,13 +18,17 @@
     </div>
   </div>
   <div class="row main-row">
+    <div class="col-title">ZEP</div>
     <div id="zep-box">
-      <iframe id="zep" src="https://zep.us/play/24G0RJ" width="100%" height="350px"> </iframe>
-      <div class="app-box">
-        <div id="zep-app">
-          <a href="https://zep.us/play/24G0RJ"><div class="link"><img class="main-app-icon" src="/images/zep.png"></div></a>
+      <% if (components === 'zep') { %>
+        <iframe id="zep" src="https://zep.us/play/24G0RJ" allow-popups: 0; width="100%" height="350px"></iframe>
+      <% } else { %>
+        <div class="app-box">
+          <div id="zep-app">
+            <a href="/zep"><div class="link"><img class="main-app-icon" src="/images/zep.png"></div></a>
+          </div>
         </div>
-      </div>
+      <% } %>
     </div>
   </div>
   <div class="row main-row">
