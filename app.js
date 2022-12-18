@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const lostarkRouter = require("./routes/lostark");
+const lottoRouter = require("./routes/lotto");
 
 app.set('view engine', 'ejs')
 app.set('views', './views')
@@ -9,7 +10,7 @@ app.set('views', './views')
 app.use(express.static("static"));
 app.use(express.json());
 
-app.use("/api", [lostarkRouter]);
+app.use("/api", [lostarkRouter, lottoRouter]);
 
 app.get('/', (req, res) => {
   res.render('index', { components: 'index' })

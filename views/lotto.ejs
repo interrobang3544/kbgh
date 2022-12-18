@@ -19,39 +19,57 @@
 <body>
   <%-include('header.ejs') %>
   <div class="main">
+    <div class="lotto_icon">
+      <img id="lotto_icon" src="/images/lotto_main_remove_background.png">
+    </div>
     <div class="tabs">
-      <input id="all" type="radio" name="tab_item" checked>
-      <label class="tab_item" for="all">로또 번호 생성</label>
-      <input id="programming" type="radio" name="tab_item">
-      <label class="tab_item" for="programming">로또 결과 조회</label>
-      <input id="design" type="radio" name="tab_item">
-      <label class="tab_item" for="design">로또 통계</label>
-      <div class="tab_content" id="all_content">
-        <div class="lotto_icon">
-          <img id="lotto_icon" src="/images/lotto_main_remove_background.png">
-        </div>
+      <input id="generate" type="radio" name="tab_item" checked>
+      <label class="tab_item" for="generate">번호 생성</label>
+      <input id="record" type="radio" name="tab_item">
+      <label class="tab_item" for="record">결과 조회</label>
+      <input id="statistic" type="radio" name="tab_item">
+      <label class="tab_item" for="statistic">통계</label>
+
+      <div class="tab_content" id="generate_content">
         <div class="banner">
           <div class="title">
             <div>
             <div class="title-name">로또 번호 자동 생성기</div>
-            <form class="form">
-              <input class="form-input" type="number" min="1" max="500" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="몇 번 생성하실 건가요?" style="width: 200px"/>
+            <form class="form generate-form">
+              <input class="form-input generate-input" type="number" min="1" max="500" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="생성할 횟수를 입력하세요" style="width: 200px"/>
             </form>
-            <div class="user-input hide"></div>
+            <div class="generate-user-input hide"></div>
             </div>
           </div>
         </div>
         <div class="contents">
-          <div class="result-list" id="result">
+          <div class="result-list result" id="result">
           </div>
         </div>
       </div>
-      <div class="tab_content" id="programming_content">
+
+      <div class="tab_content" id="record_content">
+        <div class="banner">
+          <div class="title">
+            <div>
+            <div class="title-name">로또 회차별 당첨 번호 조회</div>
+            <form class="form record-form">
+              <input class="form-input record-input" type="number" min="1" max="2000" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" placeholder="조회하실 회차를 입력하세요" style="width: 200px"/>
+            </form>
+            <div class="record-user-input hide"></div>
+            </div>
+          </div>
+        </div>
+        <div class="contents">
+          <div id="result-record">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab_content" id="statistic_content">
         미구현 기능입니다.
       </div>
-      <div class="tab_content" id="design_content">
-        미구현 기능입니다.
-      </div>
+
     </div>
   </div>
   <script src="/scripts/lotto.js"></script>

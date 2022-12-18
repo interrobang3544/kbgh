@@ -6,9 +6,10 @@
 }
 
 .banner {
+	height: 99px;
 	display: flex;
 	justify-content: center;
-	margin: 0 20px;
+	margin: 20px 20px;
 }
 
 .lotto_icon {
@@ -54,9 +55,9 @@
 	padding: 0 15px;
 }
 
-#result {
+.result {
 	text-align: center;
-	margin-top: 20px;
+	margin: 10px 0;
 }
 
 .ball {
@@ -65,14 +66,50 @@
   vertical-align: middle;
 	width: 60px;
 	height: 60px;
-	line-height: 56px;
-	margin-left: 20px;
-	margin-bottom: 10px;
+	line-height: 60px;
+	margin: 5px 10px;
 	border-radius: 100%;
 	font-size: 28px;
 	font-weight: 500;
 	color: rgb(255 255 255);
 	text-shadow: 0px 0px 3px rgb(73 57 0 / 80%);
+}
+
+.info-box {
+  display: flex;
+  margin: 4px 0;
+}
+
+.info-title {
+  height: 25px;
+  width: 120px;
+	margin-right: 10px;
+  line-height: 25px;
+  border-radius: 12px;
+  background-color: #40444f;
+  text-align: center;
+  color: white;
+}
+
+.picked-box {
+	border-radius: 12px;
+  border: 2px solid #40444f;
+	margin-top: 10px;
+}
+
+.picked-title {
+	text-align: center;
+	margin-top: 10px;
+}
+
+@media only screen and (max-width: 540px) {
+  .ball {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size:18px;
+		margin: 5px 2px;
+	}
 }
 
 .hide {
@@ -127,9 +164,9 @@ input[name="tab_item"] {
 }
 
 /* 선택 된 탭 콘텐츠를 표시 */
-#all:checked ~ #all_content,
-#programming:checked ~ #programming_content,
-#design:checked ~ #design_content {
+#generate:checked ~ #generate_content,
+#record:checked ~ #record_content,
+#statistic:checked ~ #statistic_content {
   display: block;
 }
 
